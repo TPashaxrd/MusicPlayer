@@ -281,7 +281,7 @@ const App = () => {
   pURL: "https://toprak.nivesoft.com/img/tpasha.jpg",
   color: "#171717",
   font: '',
-  Github: "https://github.com/TPashaxrd"
+  Github: "https://github.com/TPashaxrd/MusicPlayer"
   // Think big, Think Different. Do not give up, World is yours.
   }
   return (
