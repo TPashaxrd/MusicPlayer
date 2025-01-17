@@ -1,0 +1,451 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Vinyl&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* 
+! Teko, serif
+! Alfa Slab One, serif
+! DM Serif Text, serif
+! Oswald, serif
+! Space Grotesk, serif
+*/
+body {
+  background-color: #101114;
+} 
+::-webkit-scrollbar {
+  background-color: #101114;
+  display: none;
+
+}
+::-webkit-scrollbar-thumb {
+  display: none;
+  background-color: #101114;
+}
+/* Custom Song Scrollbar Start*/
+.custom-scrollbar {
+  scrollbar-width: thin; 
+  scrollbar-color: #1DB954 #333333;
+}
+.one-times {
+  text-shadow: -5px 5px 0px rgba(0,0,0,0.7);
+}
+.theln {
+  border-bottom: 1px solid #333;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #1DB954; 
+  border-radius: 50%;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #333333; 
+}
+@media (width: 1800px) {
+  @media (width: 1600px) {
+  .forcomp {
+    margin-top: -250px;
+  }
+  .forcomp2 {
+    font-size: 20px;
+    margin-left: 0px;
+    padding: 15px;
+  }
+  .forcomp3 {
+    padding: 50px;
+  }
+  .forcomp4-h {
+    margin-left: -25px;
+    font-size: 25px;
+  }
+  .forcomp4-close {
+    margin-right: 35px;
+  }
+  .forcomp4 {
+    width: 384px
+  }
+  .forcomp4-img {
+    margin-left: 35px;
+  }
+  .forcomp4-text {
+    margin-left: 52px;
+  }
+  .forcomp4-text2 a {
+    font-size: 25px;
+  }
+  .forcomp4-time {
+    margin-left: 95px;
+  }
+  .forcomp4-input input {
+    margin-left: -90px;
+  }
+  .for-both-cpdw {
+    margin-top: -5px;
+    margin-left: 35px;
+  }
+}
+}
+@media (min-width: 768px) {
+  .listcomputer {
+    max-height: 340px;
+  }
+}
+@media (max-width: 768px) {
+  .forcomp4-time a {
+    display: none;
+  }
+  .forcomp4-line {
+    display: none;
+  }
+  .forcomp4-github {
+    margin-left: 20px;
+  }
+  .forphone {
+    margin-top: -23px;
+  }
+  .listphone {
+    max-height: 170px;
+  }
+  footer {
+    padding: 16px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+  .one-time a{
+    font-size: 50px;
+    margin-left: -5px;
+  }
+  .gap-4 {
+    gap: 16px;
+  }
+
+  .mr-16 {
+    margin-right: 0;
+  }
+
+  .text-5xl {
+    font-size: 2rem; 
+  }
+
+  .text-xl {
+    font-size: 1.25rem; 
+  }
+
+  .text-sm {
+    font-size: 0.875rem; 
+  }
+
+  .text-gray-300 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .text-blue-200 {
+    color: #aad8d3; 
+  }
+
+  .text-white {
+    color: #ffffff;
+  }
+
+  .h-1 {
+    height: 2px;
+  }
+
+  .w-full {
+    width: 100%; 
+  }
+
+  .text-4xl {
+    font-size: 1.5rem; 
+  }
+
+  .hover\:text-gray-400:hover {
+    color: #d1d5db; 
+  }
+
+  .w-96 {
+    width: 100%; 
+  }
+  .bg-gray-600 {
+    background-color: #4b5563; 
+  }
+  .myfs {
+    margin-top: 25px;
+  }
+  .form-search {
+    background-color: green;
+
+  }
+  .flscreen {
+    display: none;
+  }
+  .Btn {
+    margin-left: 9px;
+  }
+  .download-button {
+    margin-left: 2px;
+  }
+}
+
+/*
+More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
+ */
+
+ /* From Uiverse.io by vinodjangid07 */ 
+.fullscreen-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.fullscreen-btn svg {
+  height: 100%;
+}
+.fullscreen-btn:hover {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+}
+.tooltip {
+  position: absolute;
+  top: -40px;
+  background-color: rgba(0, 0, 0, 0.753);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.fullscreen-btn:hover .tooltip {
+  transform: translateY(2.5px);
+  opacity: 1;
+}
+.seaa {
+  transition: width 1s;
+}
+@media (min-width: 1600px) {
+  .forcomp4s {
+    transition: width 1s;
+  }
+  .forcomp4s.active {
+    width: 100%;
+    transition: width 1s;
+    height: 100%;
+    background: #000;
+    background-image: radial-gradient(4px 100px at 0px 235px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 235px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 117.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 252px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 252px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 126px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 150px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 150px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 75px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 253px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 253px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 126.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 204px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 204px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 102px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 134px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 134px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 67px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 179px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 179px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 89.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 299px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 299px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 149.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 215px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 215px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 107.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 281px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 281px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 140.5px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 158px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 158px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 79px, #0f0 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 210px, #0f0, #0000),
+      radial-gradient(4px 100px at 300px 210px, #0f0, #0000),
+      radial-gradient(1.5px 1.5px at 150px 105px, #0f0 100%, #0000 150%);
+    background-size:
+      300px 235px,
+      300px 235px,
+      300px 235px,
+      300px 252px,
+      300px 252px,
+      300px 252px,
+      300px 150px,
+      300px 150px,
+      300px 150px,
+      300px 253px,
+      300px 253px,
+      300px 253px,
+      300px 204px,
+      300px 204px,
+      300px 204px,
+      300px 134px,
+      300px 134px,
+      300px 134px,
+      300px 179px,
+      300px 179px,
+      300px 179px,
+      300px 299px,
+      300px 299px,
+      300px 299px,
+      300px 215px,
+      300px 215px,
+      300px 215px,
+      300px 281px,
+      300px 281px,
+      300px 281px,
+      300px 158px,
+      300px 158px,
+      300px 158px,
+      300px 210px,
+      300px 210px,
+      300px 210px;
+    animation: hi 150s linear infinite;
+  }
+  
+  @keyframes hi {
+    0% {
+      background-position:
+        0px 220px,
+        3px 220px,
+        151.5px 337.5px,
+        25px 24px,
+        28px 24px,
+        176.5px 150px,
+        50px 16px,
+        53px 16px,
+        201.5px 91px,
+        75px 224px,
+        78px 224px,
+        226.5px 350.5px,
+        100px 19px,
+        103px 19px,
+        251.5px 121px,
+        125px 120px,
+        128px 120px,
+        276.5px 187px,
+        150px 31px,
+        153px 31px,
+        301.5px 120.5px,
+        175px 235px,
+        178px 235px,
+        326.5px 384.5px,
+        200px 121px,
+        203px 121px,
+        351.5px 228.5px,
+        225px 224px,
+        228px 224px,
+        376.5px 364.5px,
+        250px 26px,
+        253px 26px,
+        401.5px 105px,
+        275px 75px,
+        278px 75px,
+        426.5px 180px;
+    }
+    to {
+      background-position:
+        0px 6800px,
+        3px 6800px,
+        151.5px 6917.5px,
+        25px 13632px,
+        28px 13632px,
+        176.5px 13758px,
+        50px 5416px,
+        53px 5416px,
+        201.5px 5491px,
+        75px 17175px,
+        78px 17175px,
+        226.5px 17301.5px,
+        100px 5119px,
+        103px 5119px,
+        251.5px 5221px,
+        125px 8428px,
+        128px 8428px,
+        276.5px 8495px,
+        150px 9876px,
+        153px 9876px,
+        301.5px 9965.5px,
+        175px 13391px,
+        178px 13391px,
+        326.5px 13540.5px,
+        200px 14741px,
+        203px 14741px,
+        351.5px 14848.5px,
+        225px 18770px,
+        228px 18770px,
+        376.5px 18910.5px,
+        250px 5082px,
+        253px 5082px,
+        401.5px 5161px,
+        275px 6375px,
+        278px 6375px,
+        426.5px 6480px;
+    }
+  }  
+}
+.fullscreen {
+  transform: translate(11.25rem);
+}
+.forall input:focus {
+  outline: none;
+}
+
+.forall input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+.forall input:hover {
+  background-color: white;
+  border-radius: 10px;
+}
+.forall input:active {
+  background-color: gray;
+}
+/* .forall input:focus {
+  border-radius: 10px;
+  background-color: #4b5563;
+} */
+.security.active {
+  display: none;
+  background-color: yellow;
+  color: green;
+}

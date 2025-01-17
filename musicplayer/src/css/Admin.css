@@ -1,0 +1,287 @@
+/* :root {
+    --primary-color: #6366f1;
+    --secondary-color: #4f46e5;
+    --background-color: #0f172a;
+    --surface-color: #1e293b;
+    --text-color: #f8fafc;
+    --border-color: #334155;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+    --hover-color: #2d3748;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+h1, h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#loginForm, #panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input, button, select {
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+button {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transform-origin: center;
+}
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin-top: 20px;
+}
+th, td {
+    padding: 16px;
+    text-align: left;
+    background-color: var(--hover-color);
+}
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+tr {
+    transition: all 0.3s ease;
+}
+tbody tr {
+    cursor: pointer;
+}
+tbody tr:hover {
+    transform: translateX(5px) scale(1.01);
+}
+tbody tr td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+tbody tr td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.category-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.file-url {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+.file-url:hover {
+    text-decoration: underline;
+}
+#message {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.success {
+    background-color: var(--success-color);
+    color: white;
+    opacity: 1 !important;
+}
+.error {
+    background-color: var(--error-color);
+    color: white;
+    opacity: 1 !important;
+}
+.upload-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--hover-color);
+    border-radius: 8px;
+}
+#songFile {
+    flex-grow: 1;
+}
+.loading {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+.loading::after {
+    content: '';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60% { content: '...'; }
+    80%, 100% { content: ''; }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 12px;
+    }
+    .upload-container {
+        flex-direction: column;
+    }
+    #songFile, .upload-container button {
+        width: 100%;
+    }
+    .category-tag {
+        font-size: 0.75rem;
+    }
+} */
+
+.bn5 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .bn5:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingbn5 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bn5:active {
+    color: #000;
+  }
+  
+  .bn5:active:after {
+    background: transparent;
+  }
+  
+  .bn5:hover:before {
+    opacity: 1;
+  }
+  
+  .bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
